@@ -32,7 +32,7 @@ services:
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=v4wedsavhoqwd
     volumes:
-      - ./database:/var/lib/mysql
+      - ./db:/var/lib/mysql
     ports:
       - 3306:3306
     networks:
