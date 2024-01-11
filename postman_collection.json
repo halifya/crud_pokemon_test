@@ -1,162 +1,320 @@
 {
 	"info": {
-		"_postman_id": "5a0ef1af-7659-43bc-8ecb-aeffd04c6a6c",
-		"name": "Note App",
+		"_postman_id": "6f0df534-5ec0-4f80-8743-6cdf649ffcee",
+		"name": "Basic CRUD V2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "14791724"
+		"_exporter_id": "31320103"
 	},
 	"item": [
 		{
-			"name": "Create Note",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"You'll learn how to build a CRUD API with FastAPI\",\r\n    \"content\": \"Fastapi is really easy to use\",\r\n    \"category\": \"FastAPI\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8000/api/notes/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"notes",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get  Note",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/notes/cc5ff528-5352-4ba3-9b75-962dc5dacf2f",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"notes",
-						"cc5ff528-5352-4ba3-9b75-962dc5dacf2f"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Health Checker",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/healthchecker",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"healthchecker"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update  Note",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"✅✅👇👇This article will teach Django REST framework\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8000/api/notes/77a9ac3c-7e3b-40c1-b2d4-30729c931d3d",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"notes",
-						"77a9ac3c-7e3b-40c1-b2d4-30729c931d3d"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete  Note",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/notes/04aae95f-de90-4a39-9610-83b84485a042",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"notes",
-						"04aae95f-de90-4a39-9610-83b84485a042"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get All  Notes",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/notes?page=1&limit=10",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"notes"
-					],
-					"query": [
-						{
-							"key": "page",
-							"value": "1"
+			"name": "Notes",
+			"item": [
+				{
+					"name": "Create Note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"You'll learn how to build a CRUD API with FastAPI 1\",\r\n    \"content\": \"Fastapi is really easy to use 1\",\r\n    \"category\": \"FastAPI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						{
-							"key": "limit",
-							"value": "10"
+						"url": {
+							"raw": "{{dev-path}}/api/v1/notes/",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								""
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "Get  Note",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev-path}}/api/v1/notes/cc5ff528-5352-4ba3-9b75-962dc5dacf2f",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"cc5ff528-5352-4ba3-9b75-962dc5dacf2f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Health Checker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev-path}}/api/v1/healthchecker",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"healthchecker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  Note",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"✅✅👇👇This article will teach Django REST framework\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev-path}}/api/v1/notes/dc4a8e6e-afa0-11ee-bd7e-0242ac150002",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"dc4a8e6e-afa0-11ee-bd7e-0242ac150002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  Note",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{dev-path}}/api/v1/notes/2dd5e4c0-b02b-11ee-8e93-0242ac180002",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"2dd5e4c0-b02b-11ee-8e93-0242ac180002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All  Notes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev-path}}/api/v1/notes?page=1&limit=2",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Pokemons",
+			"item": [
+				{
+					"name": "Create Pokemon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"num\": \"001\",\r\n    \"name\": \"Bulbasaur\",\r\n    \"img\": \"http://www.serebii.net/pokemongo/pokemon/001.png\",\r\n    \"type\": [\r\n        \"Grass\",\r\n        \"Poison\"\r\n    ],\r\n    \"height\": \"0.71 m\",\r\n    \"weight\": \"6.9 kg\",\r\n    \"candy\": \"Bulbasaur Candy\",\r\n    \"egg\": \"2 km\",\r\n    \"multipliers\": [\r\n        1.58,\r\n        1.75\r\n    ],\r\n    \"weaknesses\": [\r\n        \"Fire\",\r\n        \"Ice\",\r\n        \"Flying\",\r\n        \"Psychic\"\r\n    ],\r\n    \"candy_count\": 25,\r\n    \"spawn_chance\": 0.69,\r\n    \"avg_spawns\": 69,\r\n    \"spawn_time\": \"20:00\",\r\n    \"next_evolution\": [\r\n        {\r\n            \"num\": \"002\",\r\n            \"name\": \"Ivysaur\"\r\n        },\r\n        {\r\n            \"num\": \"003\",\r\n            \"name\": \"Venusaur\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev-path}}/api/v1/pokemons/",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pokemons",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All  Pokemon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev-path}}/api/v1/pokemons?page=1&limit=2",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pokemons"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  Pokemon",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{dev-path}}/api/v1/pokemons/cda897b5-b029-11ee-b1e6-0242ac180002",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pokemons",
+								"cda897b5-b029-11ee-b1e6-0242ac180002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  Pokemon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev-path}}/api/v1/pokemons/c2639701-b029-11ee-b1e6-0242ac180002",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pokemons",
+								"c2639701-b029-11ee-b1e6-0242ac180002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  Pokemon",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"num\": \"003\",\r\n    \"name\": \"Venusaur V.2\",\r\n    \"img\": \"http://www.serebii.net/pokemongo/pokemon/003.png\",\r\n    \"type\": [\"Grass\", \"Poison\"],\r\n    \"height\": \"2.01 m\",\r\n    \"weight\": \"100.0 kg\",\r\n    \"candy\": \"Bulbasaur Candy\",\r\n    \"egg\": \"Not in Eggs\",\r\n    \"multipliers\": null,\r\n    \"weaknesses\": [\"Fire\", \"Ice\", \"Flying\", \"Psychic\"],\r\n    \"spawn_chance\": 0.017,\r\n    \"avg_spawns\": 1.7,\r\n    \"spawn_time\": \"11:30\",\r\n    \"prev_evolution\": [\r\n      { \"num\": \"001\", \"name\": \"Bulbasaur\" },\r\n      { \"num\": \"002\", \"name\": \"Ivysaur\" }\r\n    ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev-path}}/api/v1/pokemons/bfc4c39a-b02b-11ee-b035-0242ac180002",
+							"host": [
+								"{{dev-path}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pokemons",
+								"bfc4c39a-b02b-11ee-b035-0242ac180002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dev-path",
+			"value": "http://localhost:3000",
+			"type": "string"
 		}
 	]
 }
